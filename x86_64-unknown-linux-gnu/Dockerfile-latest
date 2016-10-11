@@ -7,4 +7,6 @@ RUN ln -s /root/.cargo/bin/cargo /usr/local/sbin/cargo && \
     ln -s /root/.cargo/bin/rustdoc /usr/local/sbin/rustdoc && \
     ln -s /root/.cargo/bin/rustup /usr/local/sbin/rustup
 
+ENV TARGET=x86_64-unknown-linux-gnu
+
 VOLUME /work

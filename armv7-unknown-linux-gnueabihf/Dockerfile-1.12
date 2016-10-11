@@ -10,4 +10,6 @@ RUN ln -s /usr/bin/arm-linux-gnueabihf-ld /usr/local/sbin/ld && \
     ln -s /root/.cargo/bin/rustdoc /usr/local/sbin/rustdoc && \
     ln -s /root/.cargo/bin/rustup /usr/local/sbin/rustup
 
+ENV TARGET=armv7-unknown-linux-gnueabihf
+
 VOLUME /work
