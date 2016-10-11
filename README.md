@@ -1,2 +1,24 @@
 # rustcross
-Dockerized cross compilation for Rust
+Dockerized cross compilation for Rust.
+
+## This repo
+This repository has Dockerfiles to cross-compile Rust programs to different architecture. The Docker Hub has these images as prebuilt images.
+
+## Usage
+To create a release build using cargo, run this command in your Rust root directory (where you normally run 'cargo ...'):
+
+    docker run --rm rustcross/__TARGET__:__VERSION__ cargo build --release --target __TARGET__
+    
+Where target is:
+- x86_64-unknown-linux-gnu
+- armv7-unknown-linux-gnueabihf
+- arm-unknown-linux-gnueabihf
+
+and where version is:
+- latest (currently v1.12)
+- 1.12
+
+These versions correspond to Rust versions. 
+
+## Source
+These images were created from the cross-build images in https://github.com/dockcross/dockcross.
