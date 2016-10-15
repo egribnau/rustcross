@@ -7,7 +7,7 @@ This repository has Dockerfiles to cross-compile Rust programs to different arch
 ## Usage
 To create a release build using cargo, run this command in your Rust root directory (where you normally run 'cargo ...'):
 
-    docker run --rm -v {$PWD}:/work rustcross/__TARGET__:__VERSION__ cargo build --release
+    docker run --rm -v ${PWD}:/work rustcross/__TARGET__:__VERSION__ cargo build --release
     
 Where __TARGET__ is:
 - x86_64-unknown-linux-gnu
